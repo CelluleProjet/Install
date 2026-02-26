@@ -1,4 +1,4 @@
-## Install
+## Install virtual environmen
 
 1) Download and install [Miniforge](https://github.com/conda-forge/miniforge)  
    Anaconda and Miniconda work the same way, but Miniconda uses free and openly-licensed packages from the conda-forge project by default. [More info.](https://www.sens.buffalo.edu/software/conda)
