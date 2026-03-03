@@ -35,9 +35,10 @@ deactivate
 ```bash
 conda remove -n my_env --all
 ```
-## Shortcut
+## exe Shortcut
 
 In windows the _program_name_.exe can be found in the virtual environment Scripts folder, usually something like:  
+- C:\Users\username\miniforge3\envs\my_env\Scripts
 - C:\Users\username\anaconda3\envs\my_env\Scripts
 - C:\Users\username\miniconda\envs\my_env\Scripts
 
@@ -47,3 +48,22 @@ To check where the virtual environment has been installed:
 
 conda env list 
 ```
+## General Shortcut  
+<img width="416" height="606" alt="image" src="https://github.com/user-attachments/assets/26bd5d57-2f60-46e8-b4b5-9fda7c83f086" />  
+
+A more generic way to create a shortcut for the program is to use the following syntax inside a normal shortcut:
+
+Target:  
+```bash
+%windir%\System32\cmd.exe "/K" C:\Users\username\miniforge3\Scripts\activate.bat C:\Users\username\miniforge3\envs\my_env & program_name
+```
+Or:  
+```bash
+%windir%\System32\cmd.exe "/K" C:\Users\username\miniforge3\Scripts\activate.bat C:\Users\username\miniforge3\envs\my_env & python D:\Path_to_file\program_name.py
+```
+Note the Start in: 
+```bash
+%HOMEPATH
+```
+
+  
