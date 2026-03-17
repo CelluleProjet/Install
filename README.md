@@ -35,12 +35,12 @@ deactivate
 ```bash
 conda remove -n my_env --all
 ```
-## exe Shortcut
-
-In windows the _program_name_.exe can be found in the virtual environment Scripts folder, usually something like:  
+## Shortcut
+### From system .exe
+In windows the _program_name_.exe can be found in the virtual environment Scripts folder, usually something like (depending on which program is installed):  
 - C:\Users\username\miniforge3\envs\my_env\Scripts
 - C:\Users\username\anaconda3\envs\my_env\Scripts
-- C:\Users\username\miniconda\envs\my_env\Scripts
+- C:\Users\username\miniconda3\envs\my_env\Scripts
 
 To check where the virtual environment has been installed:
 
@@ -48,22 +48,44 @@ To check where the virtual environment has been installed:
 
 conda env list 
 ```
-## General Shortcut  
+Once you've located _program_name_.exe, right-click it to create a shortcut on your desktop.  
+
+### From terminal  
 <img width="416" height="606" alt="image" src="https://github.com/user-attachments/assets/26bd5d57-2f60-46e8-b4b5-9fda7c83f086" />  
 
 A more generic way to create a shortcut for the program is to use the following syntax inside a normal shortcut:
 
-Target:  
+**Target (option 1)**
 ```bash
 %windir%\System32\cmd.exe "/K" C:\Users\username\miniforge3\Scripts\activate.bat C:\Users\username\miniforge3\envs\my_env & program_name
 ```
-Or:  
+**Target (option 2)**
 ```bash
 %windir%\System32\cmd.exe "/K" C:\Users\username\miniforge3\Scripts\activate.bat C:\Users\username\miniforge3\envs\my_env & python D:\Path_to_file\program_name.py
 ```
-Note the Start in: 
+**Note the Start in**
 ```bash
 %HOMEPATH
 ```
+**Usage**
+
+This line activates miniforge (modify to anaconda or miniconda path depending on which program is installed)
+```bash
+C:\Users\username\miniforge3\Scripts\activate.bat
+```
+This line indicates the path of the virtual environment. Use the 'conda env list' command to display all installed paths.
+```bash
+C:\Users\username\miniforge3\envs\my_env
+```
+**Option 1**: This line launch the program.
+```bash
+& program_name
+```
+If this command does not work, use the **Option 2**: specify the direct path to the program file as well.
+```bash
+& python D:\Path_to_file\program_name.py
+```
+In Rubycond use the 'Ctrl + i' shortcut to locate 'rubycond.py'. An in-app window will open displaying several details, including the file's directory.
+
 
   
