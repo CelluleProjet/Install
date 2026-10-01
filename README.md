@@ -1,9 +1,14 @@
 ## Install virtual environment
 
 1) Download and install [Miniforge](https://github.com/conda-forge/miniforge)  
-   Anaconda and Miniconda work the same way, but Miniconda uses free and openly-licensed packages from the conda-forge project by default. [More info.](https://www.sens.buffalo.edu/software/conda)
+> [!CAUTION]
+> There are [known issues](https://github.com/conda-forge/miniforge#windows) with the usage of special characters and spaces in the installation location (default installation paths include usernames). 
+> We recommend users install in a directory without any such characters in the name.
+  
+> [!NOTE]
+> Anaconda and Miniconda work the same way, but Miniconda uses free and openly-licensed packages from the conda-forge project by default. [More info.](https://www.sens.buffalo.edu/software/conda)
 
-2) From miniforge/anaconda prompt (windows) or terminal (Ubuntu & MAC) create a virtual environment with name _my_env_:
+3) From miniforge/anaconda prompt (windows) or terminal (Ubuntu & MAC) create a virtual environment with name _my_env_:
 
 ```bash
 conda create -n  my_env pip
